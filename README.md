@@ -8,3 +8,5 @@
 Файлы конфигурации CLI (.terraformrc; terraform.rc);
 
 # Сделал ветку fix
+
+# Опробуем через IDE
