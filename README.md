@@ -116,11 +116,11 @@ Date:   Thu Mar 5 21:12:06 2020 +0000
 
 
 ## 5. Найдите коммит в котором была создана функция func providerSource, ее определение в коде выглядит так func providerSource(...) (вместо троеточего перечислены аргументы).
-Вводим: /n
-git log -S 'func providerSource' --oneline /n
-Вывод : /n
-5af1e6234 main: Honor explicit provider_installation CLI config when present
-8c928e835 main: Consult local directories as potential mirrors of providers
+Вводим:
+git log -S 'func providerSource' --oneline  
+Вывод :  
+5af1e6234 main: Honor explicit provider_installation CLI config when present  
+8c928e835 main: Consult local directories as potential mirrors of providers  
 
 Можно посмотреть сами коммиты :
 git show 5af1e6234
