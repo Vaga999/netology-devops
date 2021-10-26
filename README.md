@@ -122,35 +122,35 @@ git log -S 'func providerSource' --oneline
 5af1e6234 main: Honor explicit provider_installation CLI config when present  
 8c928e835 main: Consult local directories as potential mirrors of providers  
 
-Можно посмотреть сами коммиты :
-git show 5af1e6234
-git show 8c928e835
+Можно посмотреть сами коммиты :  
+git show 5af1e6234  
+git show 8c928e835  
 
 Этот коммит 8c928e835 самый ранний из списка, соответственно в нем и появилась функция.
 
-## 6. Найдите все коммиты в которых была изменена функция globalPluginDirs.
-Сначала ищем то где появился globalPluginDirs:
+## 6. Найдите все коммиты в которых была изменена функция globalPluginDirs.  
+Сначала ищем то где появился globalPluginDirs:  
 git log -S 'globalPluginDirs' –oneline
 
-Получаем:
-35a058fb3 main: configure credentials from the CLI config file
-c0b176109 prevent log output during init
-8364383c3 Push plug
-Здесь 35a058fb3 самый ранний, смотрим его видим что если сделать поиск globalPluginDirs , то фукнкция находится в файле plugins.go
+Получаем:  
+35a058fb3 main: configure credentials from the CLI config file  
+c0b176109 prevent log output during init  
+8364383c3 Push plug  
+Здесь 35a058fb3 самый ранний, смотрим его видим что если сделать поиск globalPluginDirs , то фукнкция находится в файле plugins.go  
 
-Дальше 
-git log -L :'globalPluginDirs':plugins.go --oneline
-Получим список коммитов где велась работа с функцией:
-78b122055
-52dbf9483
-41ab0aef7
+Дальше   
+git log -L :'globalPluginDirs':plugins.go --oneline  
+Получим список коммитов где велась работа с функцией:  
+78b122055  
+52dbf9483  
+41ab0aef7  
 
 
-## 7. Кто автор функции synchronizedWriters?
-Вводим:
-git log -S 'synchronizedWriters' --pretty=format:"%H %ad %an"
+## 7. Кто автор функции synchronizedWriters?  
+Вводим:  
+git log -S 'synchronizedWriters' --pretty=format:"%H %ad %an"  
 
-bdfea50cc85161dea41be0fe3381fd98731ff786 Mon Nov 30 18:02:04 2020 -0500 James Bardin
-fd4f7eb0b935e5a838810564fd549afe710ae19a Wed Oct 21 13:06:23 2020 -0400 James Bardin
-5ac311e2a91e381e2f52234668b49ba670aa0fe5 Wed May 3 16:25:41 2017 -0700 Martin Atkins
+bdfea50cc85161dea41be0fe3381fd98731ff786 Mon Nov 30 18:02:04 2020 -0500 James Bardin  
+fd4f7eb0b935e5a838810564fd549afe710ae19a Wed Oct 21 13:06:23 2020 -0400 James Bardin  
+5ac311e2a91e381e2f52234668b49ba670aa0fe5 Wed May 3 16:25:41 2017 -0700 Martin Atkins  
 Судя по дате самое раннее упоминание 2017 год Martin Atkins
