@@ -116,7 +116,7 @@ Date:   Thu Mar 5 21:12:06 2020 +0000
 
 
 ## 5. Найдите коммит в котором была создана функция func providerSource, ее определение в коде выглядит так func providerSource(...) (вместо троеточего перечислены аргументы).
-Вводим
+Вводим:
 git log -S 'func providerSource' --oneline
 Вывод :
 5af1e6234 main: Honor explicit provider_installation CLI config when present
