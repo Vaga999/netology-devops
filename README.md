@@ -10,7 +10,7 @@
 # ч\з IDE переключился  fix --> main ветку и делаем комимт 
  
  # Домашнее задание к занятию «2.4. Инструменты Git»
- 1/ Найдите полный хеш и комментарий коммита, хеш которого начинается на aefea.
+ ## 1. Найдите полный хеш и комментарий коммита, хеш которого начинается на aefea.
 Для отображения списков коммитов вводим сначала :
 git log --oneline 
 потом для поиска нужного коммита:
@@ -21,7 +21,7 @@ commit aefead2207ef7e2aa5dc81a34aedf0cad4c32545
 Author: Alisdair McDiarmid <alisdair@users.noreply.github.com>
 Date:   Thu Jun 18 10:29:58 2020 -0400
 
-2/ Какому тегу соответствует коммит 85024d3?
+## 2. Какому тегу соответствует коммит 85024d3?
 Вводим 
 git show 85024d3
 где  85024d3 это сокращенный хэш искомого коммита.
@@ -30,7 +30,7 @@ commit 85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23)
 Author: tf-release-bot <terraform@hashicorp.com>
 Date:   Thu Mar 5 20:56:10 2020 +0000
 Нужный тэг  v0.12.23
-3/ Сколько родителей у коммита b8d720? Напишите их хеши.
+## 3. Сколько родителей у коммита b8d720? Напишите их хеши.
 Вводим $ git show --format=%p b8d720
 Вывод хэши родителей, здесь количество родителей = 2:
 
@@ -115,7 +115,7 @@ Date:   Thu Mar 5 21:12:06 2020 +0000
     Cleanup after v0.12.23 release
 
 
-5\ Найдите коммит в котором была создана функция func providerSource, ее определение в коде выглядит так func providerSource(...) (вместо троеточего перечислены аргументы).
+## 5. Найдите коммит в котором была создана функция func providerSource, ее определение в коде выглядит так func providerSource(...) (вместо троеточего перечислены аргументы).
 Вводим
 git log -S 'func providerSource' --oneline
 Вывод :
@@ -128,7 +128,7 @@ git show 8c928e835
 
 Этот коммит 8c928e835 самый ранний из списка, соответственно в нем и появилась функция.
 
-6/ Найдите все коммиты в которых была изменена функция globalPluginDirs.
+## 6. Найдите все коммиты в которых была изменена функция globalPluginDirs.
 Сначала ищем то где появился globalPluginDirs:
 git log -S 'globalPluginDirs' –oneline
 
@@ -146,7 +146,7 @@ git log -L :'globalPluginDirs':plugins.go --oneline
 41ab0aef7
 
 
-7/ Кто автор функции synchronizedWriters?
+## 7. Кто автор функции synchronizedWriters?
 Вводим:
 git log -S 'synchronizedWriters' --pretty=format:"%H %ad %an"
 
